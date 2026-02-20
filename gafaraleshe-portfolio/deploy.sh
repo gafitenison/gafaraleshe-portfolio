@@ -7,8 +7,8 @@ git checkout main
 git pull origin main
 
 # 2️⃣ Install dependencies
-echo "Installing dependencies..."
-npm install
+#echo "Installing dependencies..."
+#npm install
 
 # 3️⃣ Build static site
 echo "Building /out folder..."
