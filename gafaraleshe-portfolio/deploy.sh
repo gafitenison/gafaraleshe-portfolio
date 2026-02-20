@@ -19,7 +19,7 @@ npm run export
 # 4️⃣ Copy contents of /out to temporary folder
 echo "Copying /out contents to temporary folder..."
 TEMP_DIR=$(mktemp -d)
-cp -r out/* $TEMP_DIR/
+cp -r out/* "$TEMP_DIR"/
 
 # 5️⃣ Switch to gh-pages branch
 echo "Switching to gh-pages branch..."
@@ -31,7 +31,8 @@ git rm -r * 2>/dev/null || true
 
 # 7️⃣ Copy new build into gh-pages root
 echo "Copying new build from temp folder..."
-cp -r $TEMP_DIR/* ./
+cp -r "$TEMP_DIR"/* ./
+
 
 # 8️⃣ Commit and push changes
 echo "Committing and pushing updates to gh-pages..."
